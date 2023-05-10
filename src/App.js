@@ -6,6 +6,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Profile from "./components/Profile";
 import PhoneForm from "./components/PhoneForm";
+import PaymentForm from "./components/PaymentForm";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
@@ -57,6 +58,7 @@ function App() {
             ) : (
               <button className="googleButton phoneButton" onClick={() => setPhoneLogin(true)}>Phone Login</button>
             )}
+            <PaymentForm />
           </>
         )}
       </GoogleOAuthProvider>
